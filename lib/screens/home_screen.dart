@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'clients/clients_list_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -14,7 +15,7 @@ class _HomeScreenState extends State<HomeScreen> {
     const DashboardWidget(),
     const Center(child: Text('Factures')),
     const Center(child: Text('Produits')),
-    const Center(child: Text('Clients')),
+    const ClientsListScreen(),
     const Center(child: Text('Paramètres')),
   ];
 
