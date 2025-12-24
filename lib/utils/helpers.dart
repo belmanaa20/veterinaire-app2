@@ -60,8 +60,8 @@ class Helpers {
       final d = nombre ~/ 10;
       final u = nombre % 10;
       if (u == 0) return dizaines[d];
-      if (d == 7) return 'soixante-${unites[10 + u]}';
-      if (d == 9) return 'quatre-vingt-${unites[10 + u]}';
+      if (d == 7 && u <= 9) return 'soixante-${unites[10 + u]}';
+      if (d == 9 && u <= 9) return 'quatre-vingt-${unites[10 + u]}';
       return '${dizaines[d]}-${unites[u]}';
     }
     

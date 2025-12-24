@@ -48,7 +48,7 @@ class CustomTextField extends StatelessWidget {
         prefixIcon: prefixIcon != null ? Icon(prefixIcon) : null,
         suffixIcon: suffixIcon,
         filled: !enabled,
-        fillColor: !enabled ? Colors.grey[200] : null,
+        fillColor: !enabled ? Colors.grey[300] : null, // Darker for better contrast
       ),
     );
   }

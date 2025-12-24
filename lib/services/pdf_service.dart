@@ -5,6 +5,7 @@ import 'package:intl/intl.dart';
 import '../models/facture.dart';
 import '../models/ligne_facture.dart';
 import '../models/parametres.dart';
+import '../utils/helpers.dart';
 
 class PdfService {
   // Formatter pour les nombres
@@ -225,9 +226,9 @@ class PdfService {
     );
   }
 
-  // Convertir un montant en lettres (à implémenter)
+  // Convertir un montant en lettres
   String montantEnLettres(double montant) {
-    // TODO: Implémenter la conversion en lettres
-    return 'À implémenter';
+    // Utiliser la fonction helper
+    return Helpers.montantEnLettres(montant);
   }
 }
