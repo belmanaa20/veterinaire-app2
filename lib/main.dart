@@ -4,6 +4,9 @@ import 'config/supabase_config.dart';
 import 'config/hive_config.dart';
 import 'config/theme_config.dart';
 import 'screens/home_screen.dart';
+import 'providers/client_provider.dart';
+import 'providers/produit_provider.dart';
+import 'providers/facture_provider.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -24,10 +27,9 @@ class VeterinaireApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        // Les providers seront ajoutés ici
-        // ChangeNotifierProvider(create: (_) => ClientProvider()),
-        // ChangeNotifierProvider(create: (_) => ProduitProvider()),
-        // ChangeNotifierProvider(create: (_) => FactureProvider()),
+        ChangeNotifierProvider(create: (_) => ClientProvider()),
+        ChangeNotifierProvider(create: (_) => ProduitProvider()),
+        ChangeNotifierProvider(create: (_) => FactureProvider()),
       ],
       child: MaterialApp(
         title: 'Pharmacie Vétérinaire',
